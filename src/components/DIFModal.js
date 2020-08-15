@@ -15,6 +15,7 @@ let DIFModal= (props) => {
     >
       <Header icon='edit' content='Form Review' />
       <Modal.Content>
+          <p>Please review the submitted form:</p>
         <List animated verticalAlign='middle'>
             <List.Item>
                 <List.Icon name='heart' />
@@ -44,7 +45,7 @@ let DIFModal= (props) => {
       </Modal.Content>
       <Modal.Actions>
         <Button color="purple" onClick={() => setOpen(false)}>
-          <Icon name='checkmark' /> Submit
+          <Icon name='checkmark' /> Thanks
         </Button>
       </Modal.Actions>
     </Modal>
