@@ -9,11 +9,6 @@ import {
     Button as SemBtn
 } from 'semantic-ui-react';
 
-const setGenderField = (e) =>{
-    const genderField = document.querySelector('#gender');
-    genderField.value = e.value
-}
-
 let DogIntakeForm = props =>{
     const {handleSubmit} = props;
     return (
