@@ -6,11 +6,11 @@ import {
 } from 'redux-form';
 import {
     Form as SemForm,
-    Button as SemBtn
 } from 'semantic-ui-react';
 import GenderSelector from './GenderSelector';
 import SpayedSelector from './SpayedSelector';
 import WeightSelector from './WeightSelector';
+import DIFModal from './DIFModal';
 
 let DogIntakeForm = props =>{
     const {handleSubmit} = props;
@@ -41,7 +41,7 @@ let DogIntakeForm = props =>{
                 <ReduxField name="weight" component={WeightSelector} />
             </SemForm.Field>
             <SemForm.Field>
-                <SemBtn type="Submit">Submit</SemBtn>
+                <DIFModal />
             </SemForm.Field>
         </ReduxForm>
     );
