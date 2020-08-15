@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import {reducer as formReducer} from 'redux-form';
 
 ReactDOM.render(
   <React.StrictMode>
