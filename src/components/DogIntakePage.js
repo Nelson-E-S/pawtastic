@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import DogIntakeForm from './DogIntakeForm';
-import {Container as SemCt} from 'semantic-ui-react';
-
-//for testing
-import {Message} from 'semantic-ui-react';
+import {
+    Divider as SemDiv,
+    Grid as SemGrid,
+    Segment as SemSeg,
+    Icon as SemIcon
+} from 'semantic-ui-react';
 
 export default class DogIntakePage extends Component{
     constructor(props){
@@ -15,13 +17,17 @@ export default class DogIntakePage extends Component{
     }
     render(){
         return(
-            <SemCt>
-                <DogIntakeForm onSubmit={this.handleSubmit} />
-                <Message>
-                    <Message.Header>DIP Data:</Message.Header>
-                    <p>this.state.data: {this.state.data===''?'':JSON.stringify(this.state.data)}</p>
-                </Message>
-            </SemCt>
+            <SemSeg>
+                <SemGrid columns={2} relaxed='very'>
+                    <SemGrid.Column>
+                        <h2>Enter Your dog's details</h2>
+                    </SemGrid.Column>
+                    <SemGrid.Column>
+                        <DogIntakeForm onSubmit={this.handleSubmit} />
+                    </SemGrid.Column>
+                </SemGrid>
+                <SemDiv vertical><SemIcon name='chevron right' /></SemDiv>
+            </SemSeg>
         );
     }
 }
