@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import 'semantic-ui-css/semantic.min.css';
+import {createStore, combineReducers} from 'redux';
 
 ReactDOM.render(
   <React.StrictMode>
