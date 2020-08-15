@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button, Header, Icon, Modal } from 'semantic-ui-react'
+import {formValueSelector} from 'redux-form';
+import {connect} from 'react-redux';
 
-function ModalExampleCloseIcon() {
+function DIFModal(props) {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -28,4 +30,15 @@ function ModalExampleCloseIcon() {
   )
 }
 
-export default ModalExampleCloseIcon
+const mapStateToPros = state =>({
+    name:formValueSelector('DogIntakeForm')(state,'name'),
+    breed:formValueSelector('DogIntakeForm')(state,'breed'),
+    birth:formValueSelector('DogIntakeForm')(state,'birth'),
+    gender:formValueSelector('DogIntakeForm')(state,'female'),
+    spayed:formValueSelector('DogIntakeForm')(state,'spayed'),
+    weight:formValueSelector('DogIntakeForm')(state,'weight')
+})
+
+DIFModal = connect(mapStateToPros)(DIFModal);
+
+export default DIFModal
