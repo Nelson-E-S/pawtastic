@@ -29,3 +29,9 @@ let DogIntakeForm = props =>{
         </ReduxForm>
     );
 }
+
+DogIntakeForm = reduxForm({
+    form: 'DogIntakeForm'
+})(DogIntakeForm);
+
+export default DogIntakeForm;
